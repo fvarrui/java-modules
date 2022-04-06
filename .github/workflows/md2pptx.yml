@@ -15,5 +15,6 @@ jobs:
         uses: actions/checkout@master
         with:
           repository: MartinPacker/md2pptx
+      - run: pwd
       - run: chmod +x md2pptx
       - run: python3 md2pptx output.pptx < input.md
