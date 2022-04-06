@@ -1,0 +1,13 @@
+name: md2pptx
+#on: [push]
+jobs:
+  build-pptx:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v3
+        with:
+          python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+          architecture: 'x64' # optional x64 or x86. Defaults to x64 if not specified
+      - run: pip3 install python-pptx
+      - run: python3 md2pptx output.pptx < input.md

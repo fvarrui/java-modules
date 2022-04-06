@@ -1,2 +1,3 @@
-# java-modules
- Java Modules workshop resources
+# JPMS Workshop Resources
+
+ Java Modules workshop resources.
