@@ -16,5 +16,6 @@ jobs:
         with:
           repository: MartinPacker/md2pptx
       - run: pwd
+      - run: ls -l
       - run: chmod +x md2pptx
       - run: python3 md2pptx output.pptx < input.md
