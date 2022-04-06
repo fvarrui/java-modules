@@ -23,4 +23,4 @@ jobs:
         pip install python-pptx
     - name: Test with pytest
       run: |
-        pytest
+        python md2pptx output.pptx < input.md
