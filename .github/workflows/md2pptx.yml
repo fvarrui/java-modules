@@ -1,5 +1,5 @@
 name: md2pptx
-on:
+on: push
 jobs:
   build-pptx:
     runs-on: ubuntu-latest
