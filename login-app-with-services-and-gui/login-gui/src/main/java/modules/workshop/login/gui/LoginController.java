@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.ServiceLoader;
 
+import javafx.application.Platform;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 import javafx.event.ActionEvent;
@@ -84,6 +85,9 @@ public class LoginController implements Initializable {
 		if (loginServices.iterator().hasNext()) {
 			login = loginServices.iterator().next();
 			System.out.println("Login service implementation found: " + login.getClass().getCanonicalName());
+		} else {
+			System.err.println("Login service implementation not found!");
+			Platform.exit();
 		}
 		
 		
