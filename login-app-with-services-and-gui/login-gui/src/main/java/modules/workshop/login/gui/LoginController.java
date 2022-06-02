@@ -58,7 +58,9 @@ public class LoginController implements Initializable {
 	    	}
 			
 		} catch (LoginException e) {
+			
     		e.printStackTrace();
+    		
     		Alert alert = new Alert(AlertType.ERROR);
     		alert.initOwner(LoginApplication.primaryStage);
     		alert.setTitle("Login application");
