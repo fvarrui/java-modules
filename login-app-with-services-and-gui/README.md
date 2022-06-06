@@ -56,7 +56,7 @@ jdeps \
     | grep -v ^Warning
 ```
 
-And then generate a custom runtime image only the modules found (`java.base,java.desktop,java.scripting,jdk.jfr,jdk.unsupported`):
+And then generate a custom runtime image only with the modules found (`java.base,java.desktop,java.scripting,jdk.jfr,jdk.unsupported`):
 
 ```bash
 jlink \
