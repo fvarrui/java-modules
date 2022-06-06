@@ -1,6 +1,6 @@
 module rest.client {
 	
-	opens io.github.fvarrui.modules.rest;
+	opens modules.workshop.rest.client;
 
 	requires com.fasterxml.jackson.annotation;
 	requires jakarta.xml.bind;

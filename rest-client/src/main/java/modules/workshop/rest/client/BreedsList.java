@@ -1,4 +1,4 @@
-package io.github.fvarrui.modules.rest;
+package modules.workshop.rest.client;
 
 import java.util.List;
 import java.util.Map;

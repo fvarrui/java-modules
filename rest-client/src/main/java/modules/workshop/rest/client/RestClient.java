@@ -1,4 +1,4 @@
-package io.github.fvarrui.modules.rest;
+package modules.workshop.rest.client;
 
 import jakarta.ws.rs.client.Client;
 import jakarta.ws.rs.client.ClientBuilder;
