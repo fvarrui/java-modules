@@ -11,7 +11,7 @@ import modules.workshop.login.api.LoginException;
 
 public class LdapLogin implements Login {
 
-	// organization ID given by JumpCloud (lika an ID token)
+	// organization ID given by JumpCloud (like an ID token)
 	private static final String ORG_ID = "616d58fc59fe3e7e11ad6fda";
 	
 	// LDAP server name or IP address
@@ -32,12 +32,17 @@ public class LdapLogin implements Login {
 	public boolean login(String username, String password) throws LoginException {
 		LdapConnection connection = null;
 		try {
+			
+			String bindDN = String.format(BIND_STRING, username);
 			connection = new LdapNetworkConnection(LDAP_SERVER, LDAP_PORT, LDAP_USE_SSL);
 			connection.setTimeOut(0); // 0 = infinite timeout
-			connection.bind(String.format(BIND_STRING, username), password); // login in LDAP server using sername and password 
+			connection.bind(bindDN, password); // login in LDAP server using sername and password 
 			return true; // if "bind" process doesn't fail, authentication is valid
+			
 		} catch (LdapException e) {
+			
 			return false; // if login fails
+			
 		} finally {
 			
 			// always close LDAP server connection

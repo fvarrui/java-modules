@@ -35,6 +35,7 @@
 
 	<build>
 		<plugins>
+			<!-- copy all dependencies to target/libs -->
 			<plugin>
 				<artifactId>maven-dependency-plugin</artifactId>
 				<executions>
@@ -48,6 +49,19 @@
 						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+			<!-- generate a runnable jar -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.2.2</version>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>modules.workshop.login.gui.LoginApplication</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

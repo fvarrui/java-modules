@@ -1,5 +1,9 @@
 package modules.workshop.login.dummy.internal;
 
+/**
+ * User model
+ * @author fvarrui
+ */
 public class User {
 
 	private String username;

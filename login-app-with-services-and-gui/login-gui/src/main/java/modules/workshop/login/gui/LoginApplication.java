@@ -15,9 +15,11 @@ public class LoginApplication extends Application {
 		
 		LoginApplication.primaryStage = primaryStage;
 
+		// loads the FXML document (and instanciates and initializes "LoginController")
 		FXMLLoader loader = new FXMLLoader(LoginApplication.class.getResource("/fxml/Login.fxml"));
 		loader.load();
 
+		// setup and show the stage
 		primaryStage.setTitle("Login application");
 		primaryStage.setScene(new Scene(loader.getRoot()));
 		primaryStage.show();

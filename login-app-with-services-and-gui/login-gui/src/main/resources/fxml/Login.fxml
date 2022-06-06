@@ -6,10 +6,13 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<VBox alignment="CENTER" fillWidth="false" prefHeight="200.0" prefWidth="320.0" spacing="5.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="modules.workshop.login.gui.LoginController">
-   <children>
-      <TextField fx:id="usernameText" promptText="Username" />
-      <PasswordField fx:id="passwordText" promptText="Password" />
-      <Button defaultButton="true" mnemonicParsing="false" onAction="#onLogin" text="Login" />
-   </children>
+<VBox alignment="CENTER" fillWidth="false" prefHeight="200.0"
+	prefWidth="320.0" spacing="5.0" xmlns:fx="http://javafx.com/fxml/1"
+	xmlns="http://javafx.com/javafx/17"
+	fx:controller="modules.workshop.login.gui.LoginController">
+	<children>
+		<TextField fx:id="usernameText" promptText="Username" />
+		<PasswordField fx:id="passwordText" promptText="Password" />
+		<Button defaultButton="true" mnemonicParsing="false" onAction="#onLogin" text="Login" />
+	</children>
 </VBox>

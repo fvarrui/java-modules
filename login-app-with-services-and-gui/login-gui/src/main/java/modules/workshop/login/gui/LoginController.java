@@ -41,6 +41,7 @@ public class LoginController implements Initializable {
 
 		try {
 			
+			// check if user credentials are valid
 			boolean valid = login.login(username.get(), password.get());
 			
 	    	if (valid) {
@@ -75,15 +76,14 @@ public class LoginController implements Initializable {
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 
-		// sets bindings
+		// set bindings
     	username.bind(usernameText.textProperty());
     	password.bind(passwordText.textProperty());    	
-
 		
-		// loads login services
+		// load login services
 		Iterable<Login> loginServices = ServiceLoader.load(Login.class);
 		
-		// gets the first one
+		// get the first service implementation found
 		if (loginServices.iterator().hasNext()) {
 			login = loginServices.iterator().next();
 			System.out.println("Login service implementation found: " + login.getClass().getCanonicalName());

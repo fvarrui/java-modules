@@ -7,8 +7,6 @@
 	<version>1.0.0</version>
 	<packaging>pom</packaging>
 
-	<name>GUI login application</name>
-
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>17</maven.compiler.source>
@@ -23,6 +21,7 @@
 
 	<build>
 		<plugins>
+			<!-- change maven-compiler-version to 3.8 to compile module-info.java files -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
